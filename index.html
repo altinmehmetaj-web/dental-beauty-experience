@@ -410,26 +410,6 @@
       box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
     }
 
-    .video-placeholder {
-      background: #000;
-      border-radius: 12px;
-      height: 180px;
-      margin-bottom: 8px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .video-placeholder::after {
-      content: "▶";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 32px;
-      color: #ffffff;
-      opacity: 0.9;
-    }
-
     .testimonial-title {
       font-size: 14px;
       font-weight: 600;
@@ -698,6 +678,7 @@
   <header>
     <div class="container header-inner">
       <div class="logo-wrap">
+        <!-- Usa il tuo file caricato su GitHub, ad esempio /images/logodental.jpg -->
         <img src="logodental.jpg" alt="Dental &amp; Beauty Experience Logo" />
         <div class="logo-text">Dental &amp; Beauty Experience</div>
       </div>
@@ -705,7 +686,7 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO con foto -->
   <section class="hero">
     <div class="container hero-grid">
       <div>
@@ -733,6 +714,12 @@
         </p>
       </div>
       <div>
+        <!-- Foto hero (denti, gratuita da stock) -->
+        <img
+          src="https://images.pexels.com/photos/5355694/pexels-photo-5355694.jpeg?auto=compress&cs=tinysrgb&w=900"
+          alt="Paziente durante una visita in clinica dentale"
+          style="border-radius:20px; box-shadow:0 18px 40px rgba(15,23,42,0.25); margin-bottom:14px;"
+        />
         <div class="hero-card">
           <span class="badge">Sicurezza italiana</span>
           <h3>Un unico referente per tutto il percorso</h3>
@@ -750,7 +737,7 @@
     </div>
   </section>
 
-  <!-- CHI SIAMO -->
+  <!-- CHI SIAMO con foto -->
   <section id="chi-siamo">
     <div class="container">
       <h2>Chi siamo e cosa facciamo per te</h2>
@@ -760,6 +747,11 @@
       </p>
       <div class="two-cols">
         <div>
+          <img
+            src="https://images.pexels.com/photos/3845653/pexels-photo-3845653.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Team medico che accoglie un paziente in clinica"
+            style="border-radius:20px; box-shadow:0 18px 40px rgba(15,23,42,0.18); margin-bottom:14px;"
+          />
           <p>
             Il nostro compito è quello di essere il tuo unico punto di riferimento. Ci occupiamo di trovare la
             clinica più adatta alle tue esigenze, richiedere e spiegarti i preventivi, organizzare viaggio e alloggio
@@ -818,7 +810,7 @@
     </div>
   </section>
 
-  <!-- TRATTAMENTI -->
+  <!-- TRATTAMENTI con foto -->
   <section id="trattamenti">
     <div class="container">
       <h2>Trattamenti dentali ed estetici disponibili</h2>
@@ -827,6 +819,11 @@
       </p>
       <div class="treatments-grid">
         <div class="treatment-box">
+          <img
+            src="https://images.pexels.com/photos/5355693/pexels-photo-5355693.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Trattamento dentale professionale"
+            style="border-radius:14px; margin-bottom:10px;"
+          />
           <h3>Trattamenti Dental</h3>
           <ul>
             <li>Impianti dentali completi</li>
@@ -838,6 +835,11 @@
           </ul>
         </div>
         <div class="treatment-box">
+          <img
+            src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Trattamento estetico del viso in clinica"
+            style="border-radius:14px; margin-bottom:10px;"
+          />
           <h3>Estetica del viso</h3>
           <ul>
             <li>Filler labbra e volumizzanti</li>
@@ -897,34 +899,45 @@
     </div>
   </section>
 
-  <!-- TESTIMONIANZE -->
+  <!-- TESTIMONIANZE con foto -->
   <section id="testimonianze">
     <div class="container">
       <h2>Cosa dicono i nostri pazienti</h2>
       <p class="section-intro">
-        Le esperienze reali valgono più di mille parole. Integra qui i video dei pazienti che hanno già completato il loro percorso.
+        Le esperienze reali valgono più di mille parole. Integra qui i video o le testimonianze dei pazienti che hanno già completato il loro percorso.
       </p>
       <div class="testimonials-grid">
         <div class="testimonial-card">
-          <!-- Sostituisci questo div con un iframe YouTube/Vimeo -->
-          <div class="video-placeholder"></div>
+          <img
+            src="https://images.pexels.com/photos/3762408/pexels-photo-3762408.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Paziente che mostra il nuovo sorriso"
+            style="border-radius:12px; margin-bottom:8px;"
+          />
           <div class="testimonial-title">Da un sorriso nascosto alle foto al sorriso perfetto</div>
           <div class="testimonial-text">
-            Video-testimonianza di un paziente che ha completato il suo intervento implantare in pochi giorni.
+            Testimonianza di un paziente che ha completato il suo intervento implantare in pochi giorni.
           </div>
         </div>
         <div class="testimonial-card">
-          <div class="video-placeholder"></div>
+          <img
+            src="https://images.pexels.com/photos/3845761/pexels-photo-3845761.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Paziente e team medico in clinica"
+            style="border-radius:12px; margin-bottom:8px;"
+          />
           <div class="testimonial-title">Esperienza organizzata nei minimi dettagli</div>
           <div class="testimonial-text">
-            Racconto del viaggio in Albania, dall&apos;arrivo all&apos;hotel, fino ai controlli finali in clinica.
+            Dall&apos;arrivo in aeroporto all&apos;hotel, fino ai controlli finali in clinica, sempre accompagnato dal nostro staff.
           </div>
         </div>
         <div class="testimonial-card">
-          <div class="video-placeholder"></div>
+          <img
+            src="https://images.pexels.com/photos/3738345/pexels-photo-3738345.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Trattamento estetico del viso"
+            style="border-radius:12px; margin-bottom:8px;"
+          />
           <div class="testimonial-title">Denti e filler viso in un unico viaggio</div>
           <div class="testimonial-text">
-            Testimonianza di chi ha abbinato riabilitazione orale e trattamenti estetici per un risultato completo.
+            Chi ha abbinato riabilitazione orale e trattamenti estetici per un risultato completo e armonioso.
           </div>
         </div>
       </div>
@@ -1035,7 +1048,6 @@
   </footer>
 
   <script>
-    // imposta anno corrente nel footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
