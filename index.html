@@ -16,11 +16,7 @@
       --max-width: 1100px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -29,16 +25,8 @@
       background-color: #ffffff;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
 
     .container {
       max-width: var(--max-width);
@@ -61,21 +49,9 @@
       padding: 10px 16px;
     }
 
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-wrap img {
-      height: 52px;
-    }
-
-    .logo-text {
-      font-weight: 600;
-      font-size: 18px;
-      color: var(--green);
-    }
+    .logo-wrap { display: flex; align-items: center; gap: 10px; }
+    .logo-wrap img { height: 52px; }
+    .logo-text { font-weight: 600; font-size: 18px; color: var(--green); }
 
     .btn {
       display: inline-flex;
@@ -96,7 +72,6 @@
       color: #ffffff;
       box-shadow: 0 8px 18px rgba(26, 139, 74, 0.35);
     }
-
     .btn-primary:hover {
       transform: translateY(-1px);
       box-shadow: 0 10px 22px rgba(26, 139, 74, 0.45);
@@ -107,18 +82,13 @@
       color: var(--gold);
       background: transparent;
     }
-
-    .btn-outline:hover {
-      background: var(--gold);
-      color: #ffffff;
-    }
+    .btn-outline:hover { background: var(--gold); color: #ffffff; }
 
     .btn-whatsapp {
       background: #25d366;
       color: #ffffff;
       box-shadow: 0 8px 18px rgba(37, 211, 102, 0.35);
     }
-
     .btn-whatsapp:hover {
       background: #1ebe5d;
       transform: translateY(-1px);
@@ -188,10 +158,7 @@
       margin-bottom: 8px;
     }
 
-    .hero-note {
-      font-size: 13px;
-      color: var(--text-gray);
-    }
+    .hero-note { font-size: 13px; color: var(--text-gray); }
 
     .hero-card {
       background: #ffffff;
@@ -229,18 +196,11 @@
       margin-bottom: 10px;
     }
 
-    .hero-card ul li {
-      margin-bottom: 4px;
-    }
+    .hero-card ul li { margin-bottom: 4px; }
 
-    /* SEZIONE GENERICA */
-    section {
-      padding: 40px 0;
-    }
-
-    section:nth-of-type(even) {
-      background: var(--bg-light);
-    }
+    /* SEZIONI GENERICHE */
+    section { padding: 40px 0; }
+    section:nth-of-type(even) { background: var(--bg-light); }
 
     section h2 {
       font-size: 24px;
@@ -336,9 +296,7 @@
       color: var(--text-gray);
     }
 
-    .treatment-box ul li {
-      margin-bottom: 4px;
-    }
+    .treatment-box ul li { margin-bottom: 4px; }
 
     .treatments-note {
       font-size: 14px;
@@ -361,7 +319,6 @@
       padding: 14px 14px 16px;
       border: 1px solid #e5e7eb;
       box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
-      position: relative;
     }
 
     .step-number {
@@ -395,7 +352,7 @@
       color: var(--text-gray);
     }
 
-    /* TESTIMONIANZE */
+    /* TESTIMONIANZE – VIDEO */
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -413,6 +370,7 @@
     .testimonial-title {
       font-size: 14px;
       font-weight: 600;
+      margin-top: 8px;
       margin-bottom: 4px;
       color: var(--green);
     }
@@ -422,120 +380,22 @@
       color: var(--text-gray);
     }
 
-    /* FAQ */
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #000;
     }
 
-    .faq-item {
-      border-bottom: 1px solid #e5e7eb;
-      padding: 10px 0;
-    }
-
-    .faq-item:last-child {
-      border-bottom: none;
-    }
-
-    .faq-question {
-      font-weight: 600;
-      font-size: 14px;
-      color: var(--green);
-      margin-bottom: 3px;
-    }
-
-    .faq-answer {
-      font-size: 14px;
-      color: var(--text-gray);
-    }
-
-    /* FORM */
-    .cta-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 24px;
-      align-items: flex-start;
-    }
-
-    form {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 18px 16px 20px;
-      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
-      border: 1px solid #e5e7eb;
-    }
-
-    .form-group {
-      margin-bottom: 10px;
-    }
-
-    label {
-      display: block;
-      font-size: 13px;
-      font-weight: 500;
-      margin-bottom: 4px;
-      color: var(--text-dark);
-    }
-
-    input,
-    select,
-    textarea {
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      padding: 8px 10px;
-      border-radius: 10px;
-      border: 1px solid #d1d5db;
-      font-size: 14px;
-      outline: none;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-      font-family: inherit;
-      resize: vertical;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: var(--green);
-      box-shadow: 0 0 0 1px rgba(26, 139, 74, 0.2);
-    }
-
-    textarea {
-      min-height: 96px;
-    }
-
-    .form-helper {
-      font-size: 12px;
-      color: var(--text-gray);
-      margin-bottom: 8px;
-    }
-
-    .whatsapp-side {
-      background: linear-gradient(135deg, #f0fff6, #ffffff);
-      border-radius: 18px;
-      padding: 16px 16px 18px;
-      border: 1px solid rgba(26, 139, 74, 0.18);
-    }
-
-    .whatsapp-side h3 {
-      font-size: 18px;
-      margin-bottom: 6px;
-      color: var(--green);
-    }
-
-    .whatsapp-side p {
-      font-size: 14px;
-      color: var(--text-gray);
-      margin-bottom: 12px;
-    }
-
-    .whatsapp-number {
-      font-weight: 600;
-      color: var(--green);
-    }
-
-    .trust-text {
-      font-size: 12px;
-      color: var(--text-gray);
-      margin-top: 10px;
+      height: 100%;
+      border: 0;
     }
 
     /* FOOTER */
@@ -595,8 +455,7 @@
     @media (max-width: 900px) {
       .hero-grid,
       .two-cols,
-      .treatments-grid,
-      .cta-grid {
+      .treatments-grid {
         grid-template-columns: 1fr;
       }
 
@@ -609,60 +468,30 @@
       }
 
       .testimonials-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(1, minmax(0, 1fr));
       }
 
-      header {
-        position: static;
-      }
-
-      .header-inner {
-        padding-inline: 12px;
-      }
+      header { position: static; }
+      .header-inner { padding-inline: 12px; }
     }
 
     @media (max-width: 640px) {
-      .hero {
-        padding-top: 28px;
-      }
+      .hero { padding-top: 28px; }
 
-      .header-inner {
-        flex-direction: row;
-        gap: 8px;
-      }
-
-      .logo-wrap img {
-        height: 44px;
-      }
-
-      .logo-text {
-        font-size: 16px;
-      }
+      .header-inner { flex-direction: row; gap: 8px; }
+      .logo-wrap img { height: 44px; }
+      .logo-text { font-size: 16px; }
 
       .benefits-grid,
-      .steps,
-      .testimonials-grid {
+      .steps {
         grid-template-columns: 1fr;
       }
 
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-card { margin-top: 4px; }
 
-      .hero-card {
-        margin-top: 4px;
-      }
-
-      .whatsapp-floating {
-        right: 12px;
-        bottom: 12px;
-      }
-
-      .whatsapp-floating a {
-        width: 52px;
-        height: 52px;
-      }
+      .whatsapp-floating { right: 12px; bottom: 12px; }
+      .whatsapp-floating a { width: 52px; height: 52px; }
     }
   </style>
 </head>
@@ -678,11 +507,11 @@
   <header>
     <div class="container header-inner">
       <div class="logo-wrap">
-        <!-- Usa il tuo file caricato su GitHub, ad esempio /images/logodental.jpg -->
+        <!-- Assicurati che logodental.jpg sia nello stesso livello di index.html -->
         <img src="logodental.jpg" alt="Dental &amp; Beauty Experience Logo" />
         <div class="logo-text">Dental &amp; Beauty Experience</div>
       </div>
-      <a href="#contatti" class="btn btn-outline">Preventivo gratuito</a>
+      <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="btn btn-outline">Preventivo gratuito</a>
     </div>
   </header>
 
@@ -704,7 +533,9 @@
           <li>Un referente italiano dedicato prima, durante e dopo</li>
         </ul>
         <div class="hero-actions">
-          <a href="#contatti" class="btn btn-primary">Richiedi ora il preventivo gratuito</a>
+          <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="btn btn-primary">
+            Richiedi ora il preventivo gratuito
+          </a>
           <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="btn btn-whatsapp">
             Scrivici su WhatsApp
           </a>
@@ -714,7 +545,7 @@
         </p>
       </div>
       <div>
-        <!-- Foto hero (denti, gratuita da stock) -->
+        <!-- Foto hero: paziente in trattamento dentale -->
         <img
           src="https://images.pexels.com/photos/5355694/pexels-photo-5355694.jpeg?auto=compress&cs=tinysrgb&w=900"
           alt="Paziente durante una visita in clinica dentale"
@@ -737,7 +568,7 @@
     </div>
   </section>
 
-  <!-- CHI SIAMO con foto -->
+  <!-- CHI SIAMO con foto team -->
   <section id="chi-siamo">
     <div class="container">
       <h2>Chi siamo e cosa facciamo per te</h2>
@@ -747,6 +578,7 @@
       </p>
       <div class="two-cols">
         <div>
+          <!-- Foto team clinico che accoglie il paziente -->
           <img
             src="https://images.pexels.com/photos/3845653/pexels-photo-3845653.jpeg?auto=compress&cs=tinysrgb&w=900"
             alt="Team medico che accoglie un paziente in clinica"
@@ -810,7 +642,7 @@
     </div>
   </section>
 
-  <!-- TRATTAMENTI con foto -->
+  <!-- TRATTAMENTI con foto dedicate -->
   <section id="trattamenti">
     <div class="container">
       <h2>Trattamenti dentali ed estetici disponibili</h2>
@@ -819,9 +651,10 @@
       </p>
       <div class="treatments-grid">
         <div class="treatment-box">
+          <!-- Foto macro sorriso/denti -->
           <img
-            src="https://images.pexels.com/photos/5355693/pexels-photo-5355693.jpeg?auto=compress&cs=tinysrgb&w=900"
-            alt="Trattamento dentale professionale"
+            src="https://images.pexels.com/photos/3762408/pexels-photo-3762408.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Sorriso dopo trattamenti dentali"
             style="border-radius:14px; margin-bottom:10px;"
           />
           <h3>Trattamenti Dental</h3>
@@ -835,6 +668,7 @@
           </ul>
         </div>
         <div class="treatment-box">
+          <!-- Foto trattamento estetico viso -->
           <img
             src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=900"
             alt="Trattamento estetico del viso in clinica"
@@ -855,7 +689,7 @@
       </p>
       <div style="text-align:center;margin-top:14px;">
         <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="btn btn-primary">
-          Richiedi il tuo piano personalizzato
+          Richiedi il tuo piano personalizzato su WhatsApp
         </a>
       </div>
     </div>
@@ -872,7 +706,7 @@
         <div class="step">
           <div class="step-number">1</div>
           <h3>Primo contatto</h3>
-          <p>Ci scrivi su WhatsApp o tramite form e ci racconti le tue esigenze, inviando foto o esami se disponibili.</p>
+          <p>Ci scrivi su WhatsApp e ci racconti le tue esigenze, inviando foto o esami se disponibili.</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
@@ -899,144 +733,46 @@
     </div>
   </section>
 
-  <!-- TESTIMONIANZE con foto -->
+  <!-- TESTIMONIANZE – SOLO VIDEO -->
   <section id="testimonianze">
     <div class="container">
       <h2>Cosa dicono i nostri pazienti</h2>
       <p class="section-intro">
-        Le esperienze reali valgono più di mille parole. Integra qui i video o le testimonianze dei pazienti che hanno già completato il loro percorso.
+        Niente parla meglio dei risultati reali. Guarda le video‑testimonianze di chi ha già scelto di affidarsi a noi per sorriso e viso.
       </p>
       <div class="testimonials-grid">
         <div class="testimonial-card">
-          <img
-            src="https://images.pexels.com/photos/3762408/pexels-photo-3762408.jpeg?auto=compress&cs=tinysrgb&w=900"
-            alt="Paziente che mostra il nuovo sorriso"
-            style="border-radius:12px; margin-bottom:8px;"
-          />
-          <div class="testimonial-title">Da un sorriso nascosto alle foto al sorriso perfetto</div>
+          <div class="video-wrapper">
+            <!-- Sostituisci l'URL con il tuo video YouTube/Vimeo -->
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen title="Testimonianza paziente 1"></iframe>
+          </div>
+          <div class="testimonial-title">Da sorriso nascosto a sorriso perfetto</div>
           <div class="testimonial-text">
-            Testimonianza di un paziente che ha completato il suo intervento implantare in pochi giorni.
+            Paziente che racconta come in pochi giorni ha ottenuto una riabilitazione completa del sorriso in Albania.
           </div>
         </div>
         <div class="testimonial-card">
-          <img
-            src="https://images.pexels.com/photos/3845761/pexels-photo-3845761.jpeg?auto=compress&cs=tinysrgb&w=900"
-            alt="Paziente e team medico in clinica"
-            style="border-radius:12px; margin-bottom:8px;"
-          />
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen title="Testimonianza paziente 2"></iframe>
+          </div>
           <div class="testimonial-title">Esperienza organizzata nei minimi dettagli</div>
           <div class="testimonial-text">
-            Dall&apos;arrivo in aeroporto all&apos;hotel, fino ai controlli finali in clinica, sempre accompagnato dal nostro staff.
+            Viaggio, hotel, transfer e traduzione: tutto seguito dal nostro team per un soggiorno senza stress.
           </div>
         </div>
         <div class="testimonial-card">
-          <img
-            src="https://images.pexels.com/photos/3738345/pexels-photo-3738345.jpeg?auto=compress&cs=tinysrgb&w=900"
-            alt="Trattamento estetico del viso"
-            style="border-radius:12px; margin-bottom:8px;"
-          />
-          <div class="testimonial-title">Denti e filler viso in un unico viaggio</div>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen title="Testimonianza paziente 3"></iframe>
+          </div>
+          <div class="testimonial-title">Denti ed estetica viso in un unico viaggio</div>
           <div class="testimonial-text">
-            Chi ha abbinato riabilitazione orale e trattamenti estetici per un risultato completo e armonioso.
+            Chi ha unito riabilitazione orale e trattamenti estetici del viso per un cambiamento completo e armonioso.
           </div>
         </div>
       </div>
       <p class="treatments-note">
-        Vuoi parlare con chi ha già fatto questo percorso? Contattaci e ti mettiamo in contatto con alcuni pazienti disponibili.
+        Vuoi parlare direttamente con alcuni pazienti? Scrivici su WhatsApp e ti mettiamo in contatto con chi è disponibile a condividere la propria esperienza.
       </p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="container">
-      <h2>Domande frequenti</h2>
-      <p class="section-intro">
-        Alcune delle domande che riceviamo più spesso da chi sta pensando di curarsi in Albania.
-      </p>
-      <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-question">Il preventivo è davvero gratuito?</div>
-          <div class="faq-answer">Sì, il preventivo è completamente gratuito e senza impegno. Sarai tu a decidere se procedere oppure no.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Come funziona la garanzia sui lavori dentali?</div>
-          <div class="faq-answer">Le cliniche partner offrono garanzie su materiali e interventi. Prima di confermare il trattamento ti spieghiamo nel dettaglio condizioni e tempi.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Devo occuparmi io del volo?</div>
-          <div class="faq-answer">Ti supportiamo nella scelta del volo più comodo. Hotel, colazione e organizzazione locale li gestiamo noi con la clinica.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Serve parlare la lingua locale?</div>
-          <div class="faq-answer">No, avrai sempre un referente che parla italiano e in clinica troverai personale che ti seguirà nella tua lingua.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Quanto dura il trattamento?</div>
-          <div class="faq-answer">Dipende dal caso. Alcuni lavori si concludono in pochi giorni, altri richiedono più visite. Questa informazione è indicata già nel preventivo.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTATTI / FORM -->
-  <section id="contatti">
-    <div class="container">
-      <h2>Richiedi ora il tuo preventivo gratuito</h2>
-      <p class="section-intro">
-        Compila il form oppure scrivici direttamente su WhatsApp. Ti risponderemo con una proposta chiara e personalizzata sul tuo caso.
-      </p>
-      <div class="cta-grid">
-        <form>
-          <div class="form-group">
-            <label for="nome">Nome e Cognome</label>
-            <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome e cognome" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="nome@esempio.it" required />
-          </div>
-          <div class="form-group">
-            <label for="telefono">Numero di telefono (WhatsApp)</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+39 ..." required />
-          </div>
-          <div class="form-group">
-            <label for="tipo">Tipo di trattamento</label>
-            <select id="tipo" name="tipo" required>
-              <option value="">Seleziona...</option>
-              <option value="denti">Denti</option>
-              <option value="viso">Estetica viso</option>
-              <option value="entrambi">Entrambi</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="messaggio">Messaggio / descrizione</label>
-            <textarea id="messaggio" name="messaggio" placeholder="Descrivi il tuo problema o il risultato che vorresti ottenere"></textarea>
-          </div>
-          <p class="form-helper">
-            Se lo desideri, dopo l&apos;invio del form potrai inviarci su WhatsApp foto o radiografie per una valutazione più precisa.
-          </p>
-          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:6px;">
-            Invia richiesta di preventivo
-          </button>
-          <p class="trust-text">
-            I tuoi dati sono al sicuro e verranno utilizzati solo per fornirti il preventivo e organizzare il tuo percorso di cura.
-          </p>
-        </form>
-        <div class="whatsapp-side">
-          <h3>Preferisci scriverci direttamente su WhatsApp?</h3>
-          <p>
-            Puoi inviarci subito un messaggio, delle foto del tuo sorriso o del viso ed eventuali esami. Un consulente italiano ti risponderà nel più breve tempo possibile.
-          </p>
-          <p class="whatsapp-number">WhatsApp: +39 348 929 1264</p>
-          <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="btn btn-whatsapp" style="margin-top:10px;">
-            Apri chat WhatsApp
-          </a>
-          <p class="trust-text">
-            Nessun obbligo di acquisto: ti forniamo solo informazioni chiare e un preventivo personalizzato.
-          </p>
-        </div>
-      </div>
     </div>
   </section>
 
