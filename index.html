@@ -2,18 +2,15 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Dental & Beauty Experience - Risparmia fino al 70%</title>
+  <title>Risparmia il 70% sui denti in Albania</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Risparmia fino al 70% sui trattamenti dentali ed estetici in Albania con assistenza completa da società italiana. Preventivo gratuito e organizzazione viaggio/alloggio." />
   <style>
     :root {
       --green-main: #118c4f;
       --green-dark: #0a5d35;
       --gold-main: #d4a437;
       --text-dark: #222222;
-      --text-light: #ffffff;
-      --bg-light: #f9fbfa;
-      --border-light: #e2e8e4;
+      --bg-light: #f7faf8;
     }
 
     * {
@@ -26,7 +23,6 @@
     body {
       background-color: #ffffff;
       color: var(--text-dark);
-      line-height: 1.5;
     }
 
     img {
@@ -35,731 +31,503 @@
       display: block;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 14px 40px 14px;
+      background: radial-gradient(circle at top left, #f0fff6, #ffffff);
+      gap: 26px;
     }
 
-    .page-wrapper {
+    .landing {
+      width: 100%;
       max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px 16px 60px 16px;
+      background-color: #ffffff;
+      border-radius: 26px;
+      box-shadow: 0 16px 50px rgba(0,0,0,0.12);
+      padding: 22px 22px 24px 22px;
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 2.3fr);
+      gap: 22px;
     }
 
-    header {
+    .left {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: space-between;
-      padding: 10px 0 20px 0;
-      border-bottom: 1px solid var(--border-light);
-      margin-bottom: 20px;
+      gap: 16px;
     }
 
-    .logo-box {
+    .logo-row {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      margin-bottom: 6px;
     }
 
-    .logo-box img {
-      width: 80px;
+    .logo-row img {
+      width: 70px;
     }
 
     .logo-text {
+      font-size: 16px;
       font-weight: 600;
       color: var(--green-dark);
-      font-size: 18px;
     }
 
-    .top-cta {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 4px;
-      text-align: right;
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #e7f6ed;
+      color: var(--green-dark);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+
+    .hero-title-main {
+      font-size: 36px;
+      line-height: 1.1;
+      color: var(--green-dark);
+      margin-bottom: 6px;
+    }
+
+    .hero-title-main span {
+      color: var(--gold-main);
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .key-points {
+      list-style: none;
       font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .key-points li {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 6px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-main), var(--gold-main));
     }
 
     .whatsapp-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, var(--green-main), var(--green-dark));
-      color: var(--text-light);
-      padding: 10px 18px;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 14px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
-      border: none;
-      cursor: pointer;
-    }
-
-    .whatsapp-btn.gold {
       background: linear-gradient(135deg, var(--gold-main), #f4c15a);
       color: #1b1b1b;
-      box-shadow: 0 6px 16px rgba(212, 164, 55, 0.35);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(212,164,55,0.4);
+      margin-bottom: 4px;
+      text-decoration: none;
     }
 
-    .whatsapp-icon {
-      width: 18px;
-      height: 18px;
+    .wa-icon {
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       background-color: #25d366;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 14px;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 30px;
-      align-items: center;
-      padding: 30px 0 40px 0;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background-color: #e7f6ed;
-      color: var(--green-dark);
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      margin-bottom: 10px;
-    }
-
-    .badge span {
-      font-weight: 600;
-    }
-
-    h1 {
-      font-size: 30px;
-      margin-bottom: 10px;
-      color: var(--green-dark);
-    }
-
-    .hero-subtitle {
-      font-size: 16px;
-      margin-bottom: 18px;
-    }
-
-    .hero-list {
-      list-style: none;
-      margin-bottom: 18px;
-    }
-
-    .hero-list li {
-      margin-bottom: 6px;
-      padding-left: 22px;
-      position: relative;
-      font-size: 14px;
-    }
-
-    .hero-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--gold-main);
-      font-weight: 700;
-    }
-
-    .hero-note {
-      margin-top: 8px;
-      font-size: 12px;
-      color: #555555;
-    }
-
-    .hero-image {
-      background: radial-gradient(circle at top left, #f1fff7, #ecf5f0);
-      border-radius: 18px;
-      padding: 18px;
-      border: 1px solid var(--border-light);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .hero-image-main {
-      background-image: url("https://images.pexels.com/photos/3845766/pexels-photo-3845766.jpeg?auto=compress&cs=tinysrgb&w=800");
-      background-size: cover;
-      background-position: center;
-      border-radius: 14px;
-      height: 210px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-image-main::after {
-      content: "Esempio immagine / sostituisci con foto tua";
-      position: absolute;
-      bottom: 8px;
-      left: 10px;
-      right: 10px;
+    .note {
       font-size: 11px;
-      color: #ffffff;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+      color: #555;
     }
 
-    .hero-image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .mini-row {
+      display: flex;
       gap: 10px;
+      margin-top: 14px;
+      font-size: 11px;
+      color: #444;
     }
 
-    .hero-image-small {
-      border-radius: 10px;
-      height: 90px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-image-small:nth-child(1) {
-      background-image: url("https://images.pexels.com/photos/3762453/pexels-photo-3762453.jpeg?auto=compress&cs=tinysrgb&w=800");
-    }
-
-    .hero-image-small:nth-child(2) {
-      background-image: url("https://images.pexels.com/photos/3738342/pexels-photo-3738342.jpeg?auto=compress&cs=tinysrgb&w=800");
-    }
-
-    .section {
-      padding: 38px 0;
-      border-top: 1px solid var(--border-light);
-    }
-
-    .section:nth-child(even) {
+    .mini-block {
+      padding: 8px 10px;
+      border-radius: 14px;
       background-color: var(--bg-light);
     }
 
-    .section-title {
-      font-size: 24px;
-      margin-bottom: 12px;
-      color: var(--green-dark);
-    }
-
-    .section-subtitle {
-      font-size: 14px;
-      margin-bottom: 18px;
-      max-width: 720px;
-    }
-
-    .steps {
+    .right {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 18px;
-      margin-top: 10px;
+      grid-template-rows: 2.2fr 1.1fr;
+      gap: 10px;
     }
 
-    .step-card {
-      border-radius: 12px;
-      padding: 16px;
-      background-color: #ffffff;
-      border: 1px solid var(--border-light);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-    }
-
-    .step-number {
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background-color: #e7f6ed;
-      color: var(--green-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .step-title {
-      font-weight: 600;
-      margin-bottom: 4px;
-      font-size: 15px;
-    }
-
-    .step-text {
-      font-size: 13px;
-      color: #444444;
-    }
-
-    .two-cols {
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.5fr);
-      gap: 30px;
-      align-items: flex-start;
-      margin-top: 14px;
-    }
-
-    .list-check {
-      list-style: none;
-      font-size: 14px;
-    }
-
-    .list-check li {
-      margin-bottom: 6px;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    .list-check li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--gold-main);
-      font-weight: 700;
-    }
-
-    .card-soft {
-      background-color: #ffffff;
-      border-radius: 14px;
-      padding: 16px;
-      border: 1px solid var(--border-light);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-      font-size: 13px;
-      color: #444444;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
-      margin-top: 14px;
-    }
-
-    .why-item {
-      border-radius: 12px;
-      padding: 14px;
-      background-color: #ffffff;
-      border: 1px solid var(--border-light);
-      font-size: 13px;
-    }
-
-    .why-title {
-      font-weight: 600;
-      margin-bottom: 4px;
-      color: var(--green-dark);
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 14px;
-    }
-
-    .testimonial-card {
-      border-radius: 12px;
-      background-color: #ffffff;
-      border: 1px solid var(--border-light);
-      padding: 12px;
-      font-size: 13px;
-    }
-
-    .video-placeholder {
-      background-color: #000;
-      border-radius: 8px;
-      height: 160px;
-      margin-bottom: 8px;
+    .img-main {
+      border-radius: 18px;
       position: relative;
       overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-image: url("https://images.pexels.com/photos/3845766/pexels-photo-3845766.jpeg?auto=compress&cs=tinysrgb&w=1000");
     }
 
-    .video-placeholder::before {
+    .img-main::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(17,140,79,0.28), rgba(212,164,55,0.3));
+      background: linear-gradient(135deg, rgba(17,140,79,0.35), rgba(212,164,55,0.15));
     }
 
-    .video-play {
+    .img-main-text {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+
+    .img-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1.5fr 1.2fr;
+      gap: 8px;
+    }
+
+    .img-box {
+      border-radius: 14px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .img-box:nth-child(1) {
+      background-image: url("https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=800");
+    }
+
+    .img-box:nth-child(2) {
+      background-image: url("https://images.pexels.com/photos/3738342/pexels-photo-3738342.jpeg?auto=compress&cs=tinysrgb&w=800");
+    }
+
+    .img-box:nth-child(3) {
+      background-image: url("https://images.pexels.com/photos/3738023/pexels-photo-3738023.jpeg?auto=compress&cs=tinysrgb&w=800");
+    }
+
+    .tag {
+      position: absolute;
+      left: 6px;
+      bottom: 6px;
+      font-size: 10px;
+      color: #fff;
+      padding: 3px 6px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.55);
+    }
+
+    /* TESTIMONIANZE */
+    .testimonials {
+      width: 100%;
+      max-width: 1100px;
+      background-color: #ffffff;
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      padding: 20px 20px 22px 20px;
+    }
+
+    .test-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      gap: 10px;
+    }
+
+    .test-title {
+      font-size: 20px;
+      color: var(--green-dark);
+      font-weight: 600;
+    }
+
+    .test-sub {
+      font-size: 12px;
+      color: #555;
+    }
+
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+    }
+
+    .test-card {
+      border-radius: 16px;
+      background-color: var(--bg-light);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .video-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #000;
+      height: 160px;
+    }
+
+    /* Sostituisci lo sfondo con thumbnail dei tuoi video se vuoi */
+    .video-wrap.placeholder-1 {
+      background-image: url("https://images.pexels.com/photos/4269680/pexels-photo-4269680.jpeg?auto=compress&cs=tinysrgb&w=800");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .video-wrap.placeholder-2 {
+      background-image: url("https://images.pexels.com/photos/3762506/pexels-photo-3762506.jpeg?auto=compress&cs=tinysrgb&w=800");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .video-wrap.placeholder-3 {
+      background-image: url("https://images.pexels.com/photos/3738088/pexels-photo-3738088.jpeg?auto=compress&cs=tinysrgb&w=800");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+    }
+
+    .play-btn {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
-      background-color: rgba(255,255,255,0.9);
+      background-color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
+      font-size: 18px;
+      color: var(--green-dark);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+    }
+
+    .test-name {
+      font-size: 13px;
+      font-weight: 600;
       color: var(--green-dark);
     }
 
-    .testimonial-name {
-      font-weight: 600;
-      margin-bottom: 4px;
+    .test-text {
+      font-size: 12px;
+      color: #444;
     }
 
-    .testimonial-text {
-      font-size: 13px;
-      color: #444444;
-    }
-
-    .faq-item {
-      margin-bottom: 12px;
-    }
-
-    .faq-question {
-      font-weight: 600;
-      margin-bottom: 3px;
-      font-size: 14px;
-    }
-
-    .faq-answer {
-      font-size: 13px;
-      color: #444444;
-    }
-
-    .cta-final {
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    .cta-final p {
-      margin-bottom: 16px;
-      font-size: 14px;
-    }
-
-    footer {
-      margin-top: 30px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border-light);
+    .test-tag {
       font-size: 11px;
-      color: #666666;
-      text-align: center;
+      color: #777;
     }
 
-    @media (max-width: 800px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+    @media (max-width: 900px) {
+      .landing {
+        grid-template-columns: minmax(0,1fr);
+        border-radius: 22px;
       }
 
-      .top-cta {
-        align-items: flex-start;
-        text-align: left;
-      }
-
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-image {
+      .right {
         order: -1;
       }
 
-      .two-cols {
-        grid-template-columns: minmax(0, 1fr);
+      .hero-title-main {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .landing {
+        padding: 18px 16px 20px 16px;
+      }
+
+      .hero-title-main {
+        font-size: 24px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="page-wrapper">
+<div class="page">
 
-    <!-- HEADER -->
-    <header>
-      <div class="logo-box">
-        <!-- Sostituisci src con il percorso del tuo logo -->
-        <img src="logodental.jpg" alt="Dental & Beauty Experience Logo" />
-        <div class="logo-text">Dental &amp; Beauty Experience</div>
-      </div>
-      <div class="top-cta">
-        <div>Parla con un consulente italiano</div>
-        <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="whatsapp-btn">
-          <span class="whatsapp-icon">✆</span>
-          <span>WhatsApp 348 929 1264</span>
-        </a>
-      </div>
-    </header>
+  <!-- BLOCCO PRINCIPALE LANDING -->
+  <div class="landing">
 
-    <!-- HERO -->
-    <section class="hero">
+    <div class="left">
       <div>
-        <div class="badge">
-          <span>Risparmia fino al 70%</span> rispetto ai dentisti in Italia
+        <div class="logo-row">
+          <!-- Sostituisci src con il tuo file logo -->
+          <img src="logodental.jpg" alt="Dental &amp; Beauty Experience" />
+          <div class="logo-text">Dental &amp; Beauty Experience</div>
         </div>
-        <h1>Trattamenti dentali ed estetici in Albania con assistenza italiana completa</h1>
-        <p class="hero-subtitle">
-          Organizziamo per te viaggio, alloggio e trattamenti in una clinica partner in Albania,
-          permettendoti di ottenere un sorriso perfetto e trattamenti estetici viso/corpo a prezzi vantaggiosi.
+
+        <div class="badge">
+          Turismo dentale &amp; estetica • Società italiana
+        </div>
+
+        <h1 class="hero-title-main">
+          Risparmia <span>fino al 70%</span><br />
+          rispetto ai dentisti in Italia
+        </h1>
+
+        <p class="hero-sub">
+          Trattamenti dentali + estetica viso/corpo in Albania,<br />
+          con viaggio e hotel organizzati da noi.
         </p>
 
-        <ul class="hero-list">
-          <li>Preventivo dentale ed estetico completamente gratuito e senza impegno.</li>
-          <li>Viaggio, hotel con colazione e transfer organizzati dalla nostra società italiana.</li>
-          <li>Clinica specializzata in denti ed estetica, con standard europei.</li>
-          <li>Assistenza in italiano prima, durante e dopo il trattamento.</li>
+        <ul class="key-points">
+          <li><span class="dot"></span><span>Preventivo gratuito e senza impegno.</span></li>
+          <li><span class="dot"></span><span>Volo, hotel con colazione e transfer inclusi nel pacchetto.</span></li>
+          <li><span class="dot"></span><span>Clinica partner specializzata in denti ed estetica.</span></li>
+          <li><span class="dot"></span><span>Assistenza completa in italiano prima, durante e dopo.</span></li>
         </ul>
 
-        <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="whatsapp-btn gold">
-          <span class="whatsapp-icon">✆</span>
-          <span>Richiedi ora il tuo preventivo gratuito su WhatsApp</span>
+        <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="whatsapp-btn">
+          <span class="wa-icon">✆</span>
+          <span>Richiedi ora il tuo preventivo su WhatsApp</span>
         </a>
-        <p class="hero-note">
-          Nessun costo, nessun impegno: ti rispondiamo in poche ore.
-        </p>
-      </div>
-
-      <div class="hero-image">
-        <div class="hero-image-main"></div>
-        <div class="hero-image-grid">
-          <div class="hero-image-small"></div>
-          <div class="hero-image-small"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- COME FUNZIONA -->
-    <section class="section">
-      <h2 class="section-title">Come funziona il nostro servizio</h2>
-      <p class="section-subtitle">
-        Siamo una società italiana che fa da tramite con una clinica in Albania specializzata in denti e estetica.
-        Il nostro compito è trovare i clienti, ottenere per loro un preventivo gratuito e organizzare tutto il viaggio.
-      </p>
-
-      <div class="steps">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <div class="step-title">Contatto su WhatsApp</div>
-          <div class="step-text">
-            Ci scrivi su WhatsApp, ci racconti la tua situazione dentale o estetica e, se vuoi, ci invii foto del sorriso o delle zone da trattare.
-          </div>
-        </div>
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <div class="step-title">Preventivo gratuito</div>
-          <div class="step-text">
-            Inoltriamo le tue informazioni alla clinica partner in Albania e ti forniamo un preventivo dettagliato, senza alcun costo o impegno.
-          </div>
-        </div>
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <div class="step-title">Organizzazione viaggio e alloggio</div>
-          <div class="step-text">
-            Una volta approvato il preventivo, ci occupiamo di organizzare viaggio, hotel con colazione e transfer da/per la clinica.
-          </div>
-        </div>
-        <div class="step-card">
-          <div class="step-number">4</div>
-          <div class="step-title">Trattamento e assistenza</div>
-          <div class="step-text">
-            La clinica esegue i trattamenti e noi restiamo il tuo punto di riferimento in italiano, dal primo contatto al rientro in Italia.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRATTAMENTI DENTALI -->
-    <section class="section">
-      <h2 class="section-title">Trattamenti dentali di alta qualità</h2>
-      <p class="section-subtitle">
-        La clinica partner in Albania utilizza materiali certificati e tecnologie moderne, per risultati estetici e funzionali,
-        mantenendo costi molto più bassi rispetto ai listini italiani.
-      </p>
-
-      <div class="two-cols">
-        <div>
-          <ul class="list-check">
-            <li>Faccette dentali e estetica del sorriso.</li>
-            <li>Impianti dentali, All-on-4, All-on-6 e riabilitazioni complete.</li>
-            <li>Corone, ponti e protesi fisse o mobili.</li>
-            <li>Sbiancamento professionale e igiene orale.</li>
-            <li>Controlli completi e piani di cura personalizzati.</li>
-          </ul>
-        </div>
-        <div class="card-soft">
-          <strong>Quanto puoi risparmiare?</strong><br /><br />
-          Grazie ai costi più bassi in Albania, a parità di qualità puoi arrivare a risparmiare fino al 70% rispetto ai preventivi che ricevi di solito in Italia.
-          Il tutto con l’assistenza di una società italiana che ti segue passo passo.
-        </div>
-      </div>
-    </section>
-
-    <!-- ESTETICA VISO E CORPO -->
-    <section class="section">
-      <h2 class="section-title">Estetica viso e corpo</h2>
-      <p class="section-subtitle">
-        Oltre ai trattamenti dentali, la clinica offre soluzioni per valorizzare viso e corpo, unendo tecnologia e approccio estetico,
-        così puoi prenderti cura di tutto il tuo aspetto in un unico viaggio.
-      </p>
-
-      <div class="two-cols">
-        <div>
-          <ul class="list-check">
-            <li>Trattamenti anti-age viso (filler, biorivitalizzazione, ecc.).</li>
-            <li>Rimodellamento corpo non invasivo.</li>
-            <li>Trattamenti per pelle più luminosa e uniforme.</li>
-            <li>Pacchetti combinati sorriso + estetica viso/corpo.</li>
-          </ul>
-        </div>
-        <div class="card-soft">
-          <strong>Un’esperienza completa</strong><br /><br />
-          Il nostro obiettivo è offrirti un’esperienza di benessere a 360 gradi:
-          dall’accoglienza in aeroporto alla sistemazione in hotel, fino ai trattamenti
-          programmati con la clinica, per un percorso organizzato e senza stress.
-        </div>
-      </div>
-    </section>
-
-    <!-- PERCHE NOI -->
-    <section class="section">
-      <h2 class="section-title">Perché scegliere la nostra società italiana</h2>
-      <p class="section-subtitle">
-        Ti accompagniamo in ogni fase, garantendo chiarezza sui costi, sicurezza e supporto nella tua lingua,
-        così puoi viaggiare sereno e concentrarti solo sul risultato finale.
-      </p>
-
-      <div class="why-grid">
-        <div class="why-item">
-          <div class="why-title">Società italiana</div>
-          <p>
-            Parli sempre con un referente italiano, che conosce le tue esigenze e ti aiuta a comunicare con la clinica in modo semplice e diretto.
-          </p>
-        </div>
-        <div class="why-item">
-          <div class="why-title">Risparmio reale fino al 70%</div>
-          <p>
-            I costi in Albania sono molto più bassi, ma la clinica lavora con standard europei e materiali certificati,
-            unendo risparmio e qualità.
-          </p>
-        </div>
-        <div class="why-item">
-          <div class="why-title">Organizzazione completa</div>
-          <p>
-            Ci occupiamo di viaggio, hotel con colazione, transfer e calendario delle visite,
-            così non devi gestire nessun dettaglio logistico da solo.
-          </p>
-        </div>
-        <div class="why-item">
-          <div class="why-title">Supporto in loco</div>
-          <p>
-            Durante il soggiorno restiamo il tuo punto di riferimento, pronti ad aiutarti per qualsiasi dubbio o esigenza legata al trattamento.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIANZE VIDEO -->
-    <section class="section">
-      <h2 class="section-title">Testimonianze in video</h2>
-      <p class="section-subtitle">
-        Guarda le esperienze di chi ha già scelto di curare il proprio sorriso e il proprio corpo in Albania con il nostro supporto.
-        Qui sotto puoi inserire i tuoi video reali (YouTube, TikTok o file caricati).
-      </p>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="video-placeholder">
-            <!-- Sostituisci questo div con un vero <iframe> YouTube o video -->
-            <div class="video-play">▶</div>
-          </div>
-          <div class="testimonial-name">Maria, 45 anni – Faccette dentali</div>
-          <div class="testimonial-text">
-            “Ho risparmiato oltre il 60% rispetto al preventivo italiano e mi sono sentita seguita dall’inizio alla fine.”
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="video-placeholder">
-            <div class="video-play">▶</div>
-          </div>
-          <div class="testimonial-name">Luca, 52 anni – Impianti completi</div>
-          <div class="testimonial-text">
-            “Tutto organizzato: volo, hotel e trasporti. Ho pensato solo a fare il lavoro ai denti.”
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="video-placeholder">
-            <div class="video-play">▶</div>
-          </div>
-          <div class="testimonial-name">Sara, 38 anni – Estetica viso</div>
-          <div class="testimonial-text">
-            “In pochi giorni ho fatto sia il trattamento estetico che il controllo ai denti, con un’assistenza sempre in italiano.”
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section">
-      <h2 class="section-title">Domande frequenti</h2>
-
-      <div class="faq-item">
-        <div class="faq-question">Quanto posso risparmiare rispetto all’Italia?</div>
-        <div class="faq-answer">
-          In molti casi si arriva a risparmiare fino al 70% rispetto ai preventivi italiani,
-          a seconda del tipo di trattamento e del piano di cura consigliato dalla clinica.
+        <div class="note">
+          Scrivi ora, ti rispondiamo velocemente e senza nessun impegno.
         </div>
       </div>
 
-      <div class="faq-item">
-        <div class="faq-question">Il preventivo è davvero gratuito?</div>
-        <div class="faq-answer">
-          Sì, il preventivo è completamente gratuito e senza impegno.
-          Dopo averlo ricevuto, decidi tu in piena libertà se partire o meno.
+      <div class="mini-row">
+        <div class="mini-block">
+          Denti: faccette, impianti, corone, sbiancamento.
+        </div>
+        <div class="mini-block">
+          Estetica: viso e corpo con trattamenti dedicati.
         </div>
       </div>
+    </div>
 
-      <div class="faq-item">
-        <div class="faq-question">Quanto dura il viaggio?</div>
-        <div class="faq-answer">
-          Dall’Italia all’Albania il volo dura in media tra 1 e 2 ore, in base all’aeroporto di partenza.
-          Ti aiutiamo a trovare le soluzioni più comode.
+    <div class="right">
+      <div class="img-main">
+        <div class="img-main-text">
+          Sorriso nuovo, viaggio organizzato,<br />prezzi molto più bassi.
         </div>
       </div>
-
-      <div class="faq-item">
-        <div class="faq-question">Dove alloggerò durante il trattamento?</div>
-        <div class="faq-answer">
-          Organizziamo per te hotel selezionati con colazione inclusa, in posizione comoda rispetto alla clinica,
-          così puoi muoverti in tranquillità.
+      <div class="img-grid">
+        <div class="img-box">
+          <div class="tag">Trattamenti dentali</div>
+        </div>
+        <div class="img-box">
+          <div class="tag">Estetica viso &amp; corpo</div>
+        </div>
+        <div class="img-box">
+          <div class="tag">Hotel &amp; comfort</div>
         </div>
       </div>
-    </section>
-
-    <!-- CTA FINALE -->
-    <section class="section">
-      <div class="cta-final">
-        <h2 class="section-title">Inizia ora: ricevi il tuo preventivo gratuito</h2>
-        <p>
-          Scrivici su WhatsApp, raccontaci cosa ti serve per i tuoi denti o per l’estetica
-          di viso e corpo e ti metteremo in contatto con la clinica partner in Albania per un preventivo chiaro e dettagliato.
-        </p>
-        <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="whatsapp-btn gold">
-          <span class="whatsapp-icon">✆</span>
-          <span>Scrivici su WhatsApp: 348 929 1264</span>
-        </a>
-        <p class="hero-note" style="margin-top:10px;">
-          Risposta rapida, in italiano, senza alcun impegno da parte tua.
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Dental &amp; Beauty Experience – Società italiana di intermediazione per trattamenti dentali ed estetici in Albania.  
-      Le immagini presenti sono solo a scopo illustrativo.
-    </footer>
+    </div>
 
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <!-- SEZIONE TESTIMONIANZE VIDEO -->
+  <section class="testimonials">
+    <div class="test-head">
+      <div>
+        <div class="test-title">Video testimonianze reali</div>
+        <div class="test-sub">
+          Guarda cosa dicono i clienti che hanno già rifatto denti ed estetica in Albania con noi.
+        </div>
+      </div>
+      <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="whatsapp-btn" style="padding:8px 14px;font-size:12px;box-shadow:none;">
+        <span class="wa-icon" style="width:18px;height:18px;font-size:12px;">✆</span>
+        <span>Fai la tua domanda</span>
+      </a>
+    </div>
+
+    <div class="test-grid">
+      <!-- Video 1 -->
+      <div class="test-card">
+        <!-- Sostituisci il div seguente con un iframe YouTube del tuo video -->
+        <a href="https://www.youtube.com/watch?v=VIDEO1" target="_blank" class="video-wrap placeholder-1">
+          <div class="video-overlay"></div>
+          <div class="play-btn">▶</div>
+        </a>
+        <div class="test-name">Maria, 45 anni – Faccette dentali</div>
+        <div class="test-tag">Risparmio di circa 60% rispetto al preventivo italiano</div>
+        <div class="test-text">
+          “Viaggio e hotel organizzati, mi sono solo concentrata sul risultato del sorriso.”
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="test-card">
+        <a href="https://www.youtube.com/watch?v=VIDEO2" target="_blank" class="video-wrap placeholder-2">
+          <div class="video-overlay"></div>
+          <div class="play-btn">▶</div>
+        </a>
+        <div class="test-name">Luca, 52 anni – Impianti completi</div>
+        <div class="test-tag">Denti fissi + volo e hotel gestiti dal nostro team</div>
+        <div class="test-text">
+          “In pochi giorni ho fatto il lavoro ai denti e ho speso molto meno che in Italia.”
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="test-card">
+        <a href="https://www.youtube.com/watch?v=VIDEO3" target="_blank" class="video-wrap placeholder-3">
+          <div class="video-overlay"></div>
+          <div class="play-btn">▶</div>
+        </a>
+        <div class="test-name">Sara, 38 anni – Estetica viso + sbiancamento</div>
+        <div class="test-tag">Abbinato estetica viso e controllo dentale nello stesso viaggio</div>
+        <div class="test-text">
+          “Supporto sempre in italiano, dall’aeroporto fino al rientro a casa.”
+        </div>
+      </div>
+
+      <!-- (Opzionale) Video 4: duplica uno dei blocchi -->
+      <!--
+      <div class="test-card">
+        <a href="https://www.youtube.com/watch?v=VIDEO4" target="_blank" class="video-wrap placeholder-1">
+          <div class="video-overlay"></div>
+          <div class="play-btn">▶</div>
+        </a>
+        <div class="test-name">Nome cliente – Tipo trattamento</div>
+        <div class="test-tag">Breve descrizione del caso</div>
+        <div class="test-text">
+          “Inserisci qui una frase breve dal tuo video.”
+        </div>
+      </div>
+      -->
+    </div>
+  </section>
+
+</div>
 
 </body>
 </html>
