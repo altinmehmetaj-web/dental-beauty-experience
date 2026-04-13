@@ -2,14 +2,14 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Risparmia il 70% sui denti in Albania</title>
+  <title>Risparmia il 70% – Turismo dentale & estetica in Albania</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
       --green-main: #118c4f;
       --green-dark: #0a5d35;
       --gold-main: #d4a437;
-      --text-dark: #222222;
+      --text-dark: #111111;
       --bg-light: #f7faf8;
     }
 
@@ -21,7 +21,7 @@
     }
 
     body {
-      background-color: #ffffff;
+      background: radial-gradient(circle at top left, #f0fff6, #ffffff);
       color: var(--text-dark);
     }
 
@@ -33,48 +33,67 @@
 
     .page {
       min-height: 100vh;
+      padding: 20px 14px 40px 14px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px 14px 40px 14px;
-      background: radial-gradient(circle at top left, #f0fff6, #ffffff);
       gap: 26px;
     }
 
-    .landing {
+    /* BLOCCO HERO / FUNNEL TOP */
+    .hero-card {
       width: 100%;
       max-width: 1100px;
       background-color: #ffffff;
-      border-radius: 26px;
-      box-shadow: 0 16px 50px rgba(0,0,0,0.12);
-      padding: 22px 22px 24px 22px;
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.14);
+      padding: 22px 24px 24px 24px;
       display: grid;
-      grid-template-columns: minmax(0, 2.2fr) minmax(0, 2.3fr);
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 2.4fr);
       gap: 22px;
     }
 
-    .left {
+    .hero-left {
       display: flex;
       flex-direction: column;
+      gap: 14px;
       justify-content: space-between;
-      gap: 16px;
+    }
+
+    .hero-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 2px;
     }
 
     .logo-row {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 6px;
+      gap: 10px;
     }
 
     .logo-row img {
-      width: 70px;
+      width: 64px;
     }
 
     .logo-text {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
       color: var(--green-dark);
+    }
+
+    .top-trust {
+      text-align: right;
+      font-size: 11px;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .top-trust span {
+      color: var(--gold-main);
+      font-weight: 600;
     }
 
     .badge {
@@ -89,14 +108,21 @@
       margin-bottom: 4px;
     }
 
-    .hero-title-main {
-      font-size: 36px;
-      line-height: 1.1;
-      color: var(--green-dark);
-      margin-bottom: 6px;
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-main), var(--gold-main));
     }
 
-    .hero-title-main span {
+    .hero-title-big {
+      font-size: 34px;
+      line-height: 1.05;
+      color: var(--green-dark);
+      margin-bottom: 4px;
+    }
+
+    .hero-title-big span {
       color: var(--gold-main);
     }
 
@@ -118,11 +144,16 @@
       margin-bottom: 6px;
     }
 
-    .dot {
-      width: 8px;
-      height: 8px;
+    .key-icon {
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--green-main), var(--gold-main));
+      border: 2px solid var(--gold-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--gold-main);
     }
 
     .whatsapp-btn {
@@ -131,20 +162,20 @@
       gap: 8px;
       background: linear-gradient(135deg, var(--gold-main), #f4c15a);
       color: #1b1b1b;
-      padding: 12px 18px;
+      padding: 13px 20px;
       border-radius: 999px;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 15px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 8px 22px rgba(212,164,55,0.4);
-      margin-bottom: 4px;
+      box-shadow: 0 10px 28px rgba(212,164,55,0.45);
       text-decoration: none;
+      margin-bottom: 4px;
     }
 
     .wa-icon {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       background-color: #25d366;
       color: #fff;
@@ -154,29 +185,33 @@
       font-size: 14px;
     }
 
-    .note {
+    .cta-subtext {
       font-size: 11px;
       color: #555;
     }
 
-    .mini-row {
+    .mini-strip {
       display: flex;
       gap: 10px;
-      margin-top: 14px;
+      margin-top: 12px;
       font-size: 11px;
+    }
+
+    .mini-pill {
+      flex: 1;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background-color: var(--bg-light);
+      border: 1px dashed #d6e3dc;
+      text-align: center;
       color: #444;
     }
 
-    .mini-block {
-      padding: 8px 10px;
-      border-radius: 14px;
-      background-color: var(--bg-light);
-    }
-
-    .right {
+    /* HERO RIGHT – IMMAGINI E MICRO PROVE SOCIALI */
+    .hero-right {
       display: grid;
-      grid-template-rows: 2.2fr 1.1fr;
-      gap: 10px;
+      grid-template-rows: 2.1fr 1.1fr;
+      gap: 12px;
     }
 
     .img-main {
@@ -192,7 +227,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(17,140,79,0.35), rgba(212,164,55,0.15));
+      background: linear-gradient(135deg, rgba(17,140,79,0.35), rgba(212,164,55,0.12));
     }
 
     .img-main-text {
@@ -205,13 +240,13 @@
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
 
-    .img-grid {
+    .hero-bottom {
       display: grid;
-      grid-template-columns: 1.5fr 1.5fr 1.2fr;
-      gap: 8px;
+      grid-template-columns: 1.5fr 1.7fr;
+      gap: 10px;
     }
 
-    .img-box {
+    .img-stack {
       border-radius: 14px;
       overflow: hidden;
       background-size: cover;
@@ -219,36 +254,53 @@
       position: relative;
     }
 
-    .img-box:nth-child(1) {
-      background-image: url("https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=800");
-    }
-
-    .img-box:nth-child(2) {
+    .img-stack:nth-child(1) {
       background-image: url("https://images.pexels.com/photos/3738342/pexels-photo-3738342.jpeg?auto=compress&cs=tinysrgb&w=800");
     }
 
-    .img-box:nth-child(3) {
+    .img-stack:nth-child(2) {
       background-image: url("https://images.pexels.com/photos/3738023/pexels-photo-3738023.jpeg?auto=compress&cs=tinysrgb&w=800");
     }
 
-    .tag {
+    .stack-tag {
       position: absolute;
-      left: 6px;
-      bottom: 6px;
+      left: 8px;
+      bottom: 8px;
       font-size: 10px;
       color: #fff;
-      padding: 3px 6px;
+      padding: 3px 7px;
       border-radius: 999px;
-      background: rgba(0,0,0,0.55);
+      background: rgba(0,0,0,0.6);
     }
 
-    /* TESTIMONIANZE */
+    .micro-proof {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255,255,255,0.92);
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 10px;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .micro-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #32cd32;
+    }
+
+    /* TESTIMONIANZE VIDEO (FUNNEL STEP 2) */
     .testimonials {
       width: 100%;
       max-width: 1100px;
       background-color: #ffffff;
       border-radius: 22px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      box-shadow: 0 12px 38px rgba(0,0,0,0.12);
       padding: 20px 20px 22px 20px;
     }
 
@@ -256,8 +308,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 14px;
       gap: 10px;
+      margin-bottom: 14px;
     }
 
     .test-title {
@@ -269,6 +321,13 @@
     .test-sub {
       font-size: 12px;
       color: #555;
+      margin-top: 3px;
+    }
+
+    .test-head-cta {
+      font-size: 11px;
+      color: #666;
+      text-align: right;
     }
 
     .test-grid {
@@ -294,7 +353,6 @@
       height: 160px;
     }
 
-    /* Sostituisci lo sfondo con thumbnail dei tuoi video se vuoi */
     .video-wrap.placeholder-1 {
       background-image: url("https://images.pexels.com/photos/4269680/pexels-photo-4269680.jpeg?auto=compress&cs=tinysrgb&w=800");
       background-size: cover;
@@ -316,7 +374,7 @@
     .video-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+      background: linear-gradient(135deg, rgba(0,0,0,0.25), rgba(0,0,0,0.6));
     }
 
     .play-btn {
@@ -324,8 +382,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background-color: #ffffff;
       display: flex;
@@ -342,37 +400,66 @@
       color: var(--green-dark);
     }
 
-    .test-text {
-      font-size: 12px;
-      color: #444;
-    }
-
     .test-tag {
       font-size: 11px;
       color: #777;
     }
 
+    .test-text {
+      font-size: 12px;
+      color: #444;
+    }
+
+    .test-cta-row {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .mini-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: linear-gradient(135deg, var(--green-main), var(--green-dark));
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .mini-wa-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
     @media (max-width: 900px) {
-      .landing {
+      .hero-card {
         grid-template-columns: minmax(0,1fr);
-        border-radius: 22px;
+        border-radius: 24px;
       }
 
-      .right {
+      .hero-right {
         order: -1;
       }
 
-      .hero-title-main {
+      .hero-title-big {
         font-size: 28px;
       }
     }
 
     @media (max-width: 540px) {
-      .landing {
+      .hero-card {
         padding: 18px 16px 20px 16px;
       }
 
-      .hero-title-main {
+      .hero-title-big {
         font-size: 24px;
       }
     }
@@ -382,105 +469,118 @@
 
 <div class="page">
 
-  <!-- BLOCCO PRINCIPALE LANDING -->
-  <div class="landing">
-
-    <div class="left">
+  <!-- STEP 1 FUNNEL: HERO CON OFFERTA -->
+  <section class="hero-card">
+    <div class="hero-left">
       <div>
-        <div class="logo-row">
-          <!-- Sostituisci src con il tuo file logo -->
-          <img src="logodental.jpg" alt="Dental &amp; Beauty Experience" />
-          <div class="logo-text">Dental &amp; Beauty Experience</div>
+        <div class="hero-header">
+          <div class="logo-row">
+            <img src="logodental.jpg" alt="Dental &amp; Beauty Experience" />
+            <div class="logo-text">Dental &amp; Beauty Experience</div>
+          </div>
+          <div class="top-trust">
+            Società italiana •<br />
+            <span>Turismo dentale &amp; estetica</span>
+          </div>
         </div>
 
         <div class="badge">
-          Turismo dentale &amp; estetica • Società italiana
+          <span class="badge-dot"></span>
+          Offerta limitata per pazienti dall’Italia
         </div>
 
-        <h1 class="hero-title-main">
+        <h1 class="hero-title-big">
           Risparmia <span>fino al 70%</span><br />
           rispetto ai dentisti in Italia
         </h1>
 
         <p class="hero-sub">
-          Trattamenti dentali + estetica viso/corpo in Albania,<br />
-          con viaggio e hotel organizzati da noi.
+          Rifai denti + estetica viso/corpo in una clinica partner in Albania.<br />
+          Noi organizziamo <strong>viaggio, hotel con colazione e assistenza</strong>.
         </p>
 
         <ul class="key-points">
-          <li><span class="dot"></span><span>Preventivo gratuito e senza impegno.</span></li>
-          <li><span class="dot"></span><span>Volo, hotel con colazione e transfer inclusi nel pacchetto.</span></li>
-          <li><span class="dot"></span><span>Clinica partner specializzata in denti ed estetica.</span></li>
-          <li><span class="dot"></span><span>Assistenza completa in italiano prima, durante e dopo.</span></li>
+          <li>
+            <span class="key-icon">€</span>
+            <span>Preventivo dentale/estetico <strong>gratuito</strong> e senza impegno su WhatsApp.</span>
+          </li>
+          <li>
+            <span class="key-icon">✈</span>
+            <span>Volo, hotel e transfer coordinati dal nostro team italiano.</span>
+          </li>
+          <li>
+            <span class="key-icon">★</span>
+            <span>Clinica specializzata in denti + estetica viso/corpo con standard europei.</span>
+          </li>
+          <li>
+            <span class="key-icon">🤝</span>
+            <span>Un unico referente italiano prima, durante e dopo il trattamento.</span>
+          </li>
         </ul>
 
         <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="whatsapp-btn">
           <span class="wa-icon">✆</span>
-          <span>Richiedi ora il tuo preventivo su WhatsApp</span>
+          <span>SCRIVICI ORA SU WHATSAPP PER IL TUO PREVENTIVO</span>
         </a>
-        <div class="note">
-          Scrivi ora, ti rispondiamo velocemente e senza nessun impegno.
+        <div class="cta-subtext">
+          Nessuna carta di credito, nessun obbligo: invii foto e ricevi il preventivo in italiano.
         </div>
-      </div>
 
-      <div class="mini-row">
-        <div class="mini-block">
-          Denti: faccette, impianti, corone, sbiancamento.
-        </div>
-        <div class="mini-block">
-          Estetica: viso e corpo con trattamenti dedicati.
+        <div class="mini-strip">
+          <div class="mini-pill">Denti: faccette, impianti, corone, all-on-4, sbiancamento.</div>
+          <div class="mini-pill">Estetica: viso e corpo, pacchetti combinati sorriso + estetica.</div>
         </div>
       </div>
     </div>
 
-    <div class="right">
+    <div class="hero-right">
       <div class="img-main">
+        <div class="micro-proof">
+          <span class="micro-dot"></span>
+          Oltre 100+ preventivi gestiti per pazienti dall’Italia
+        </div>
         <div class="img-main-text">
-          Sorriso nuovo, viaggio organizzato,<br />prezzi molto più bassi.
+          Sorriso nuovo + viaggio organizzato,<br />a un prezzo che in Italia pagheresti molto di più.
         </div>
       </div>
-      <div class="img-grid">
-        <div class="img-box">
-          <div class="tag">Trattamenti dentali</div>
+      <div class="hero-bottom">
+        <div class="img-stack">
+          <div class="stack-tag">Trattamenti dentali</div>
         </div>
-        <div class="img-box">
-          <div class="tag">Estetica viso &amp; corpo</div>
-        </div>
-        <div class="img-box">
-          <div class="tag">Hotel &amp; comfort</div>
+        <div class="img-stack">
+          <div class="stack-tag">Estetica viso &amp; corpo • Hotel</div>
         </div>
       </div>
     </div>
+  </section>
 
-  </div>
-
-  <!-- SEZIONE TESTIMONIANZE VIDEO -->
+  <!-- STEP 2 FUNNEL: PROVA SOCIALE -->
   <section class="testimonials">
     <div class="test-head">
       <div>
-        <div class="test-title">Video testimonianze reali</div>
+        <div class="test-title">Guarda chi ha già risparmiato con noi</div>
         <div class="test-sub">
-          Guarda cosa dicono i clienti che hanno già rifatto denti ed estetica in Albania con noi.
+          Brevi video reali di pazienti italiani che hanno scelto Albania per denti ed estetica.
         </div>
       </div>
-      <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="whatsapp-btn" style="padding:8px 14px;font-size:12px;box-shadow:none;">
-        <span class="wa-icon" style="width:18px;height:18px;font-size:12px;">✆</span>
-        <span>Fai la tua domanda</span>
-      </a>
+      <div class="test-head-cta">
+        Dopo aver visto le testimonianze,<br />
+        scrivici su WhatsApp per il tuo caso.
+      </div>
     </div>
 
     <div class="test-grid">
       <!-- Video 1 -->
       <div class="test-card">
-        <!-- Sostituisci il div seguente con un iframe YouTube del tuo video -->
+        <!-- Sostituisci href con il link YouTube/TikTok reale -->
         <a href="https://www.youtube.com/watch?v=VIDEO1" target="_blank" class="video-wrap placeholder-1">
           <div class="video-overlay"></div>
           <div class="play-btn">▶</div>
         </a>
         <div class="test-name">Maria, 45 anni – Faccette dentali</div>
-        <div class="test-tag">Risparmio di circa 60% rispetto al preventivo italiano</div>
+        <div class="test-tag">Circa 60% in meno rispetto al preventivo in Italia</div>
         <div class="test-text">
-          “Viaggio e hotel organizzati, mi sono solo concentrata sul risultato del sorriso.”
+          “Sono arrivata, avevo già tutto organizzato. Hotel, transfer e appuntamenti in clinica.”
         </div>
       </div>
 
@@ -491,9 +591,9 @@
           <div class="play-btn">▶</div>
         </a>
         <div class="test-name">Luca, 52 anni – Impianti completi</div>
-        <div class="test-tag">Denti fissi + volo e hotel gestiti dal nostro team</div>
+        <div class="test-tag">Denti fissi + volo e hotel gestiti dal team</div>
         <div class="test-text">
-          “In pochi giorni ho fatto il lavoro ai denti e ho speso molto meno che in Italia.”
+          “In Italia non avrei potuto permettermelo. Qui ho fatto tutto in pochi giorni.”
         </div>
       </div>
 
@@ -504,9 +604,9 @@
           <div class="play-btn">▶</div>
         </a>
         <div class="test-name">Sara, 38 anni – Estetica viso + sbiancamento</div>
-        <div class="test-tag">Abbinato estetica viso e controllo dentale nello stesso viaggio</div>
+        <div class="test-tag">Sorriso + estetica viso nello stesso viaggio</div>
         <div class="test-text">
-          “Supporto sempre in italiano, dall’aeroporto fino al rientro a casa.”
+          “Mi hanno seguito in italiano dall’aeroporto al rientro, zero stress con l’organizzazione.”
         </div>
       </div>
 
@@ -524,6 +624,13 @@
         </div>
       </div>
       -->
+    </div>
+
+    <div class="test-cta-row">
+      <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="mini-wa">
+        <span class="mini-wa-icon">✆</span>
+        <span>Voglio sapere quanto risparmierei io</span>
+      </a>
     </div>
   </section>
 
