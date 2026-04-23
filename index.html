@@ -16,101 +16,8 @@
       --bg: #fcfdfb;
       --text-dark: #111111;
     }
-/* SEZIONE BEAUTY */
-.beauty {
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: 0 18px 60px rgba(0,0,0,0.14);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 420px;
-}
 
-.beauty-photo {
-  position: relative;
-  overflow: hidden;
-}
-
-.beauty-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-}
-
-.beauty-content {
-  background: linear-gradient(135deg, #1a0533, #2d0a5e);
-  padding: 40px 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 18px;
-  color: #ffffff;
-}
-
-.beauty-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.22);
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  width: fit-content;
-  color: #f0c6ff;
-}
-
-.beauty-title {
-  font-size: clamp(22px, 2.5vw, 30px);
-  font-weight: 800;
-  line-height: 1.15;
-}
-
-.beauty-title span {
-  color: #e8a0ff;
-}
-
-.beauty-desc {
-  font-size: 14px;
-  line-height: 1.65;
-  color: rgba(255,255,255,0.85);
-}
-
-.beauty-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-}
-
-.beauty-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 5px 11px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  font-size: 11px;
-  color: #ffffff;
-}
-
-/* mobile */
-@media (max-width: 720px) {
-  .beauty {
-    grid-template-columns: 1fr;
-  }
-
-  .beauty-photo {
-    height: 260px;
-  }
-
-  .beauty-content {
-    padding: 28px 22px;
-  }
+    /* RESET BASE */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -129,19 +36,20 @@
       display: block;
     }
 
+    /* LAYOUT PAGINA */
     .page {
       min-height: 100vh;
-      padding: 24px 18px 40px;
+      padding: 32px 16px 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 28px;
     }
 
-    /* contenitore centrale per desktop */
     .page > section {
       width: 100%;
-      max-width: 1100px; /* più largo su desktop */
+      max-width: 1100px;
+      margin-inline: auto;
     }
 
     /* HERO */
@@ -150,7 +58,7 @@
       background: radial-gradient(circle at top left, #f0fff6, #ffffff);
       box-shadow: 0 18px 60px rgba(0,0,0,0.12);
       border: 1px solid #e6efe9;
-      padding: 24px 22px 24px;
+      padding: 28px 26px 26px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -252,6 +160,7 @@
       color: var(--gold-main);
     }
 
+    /* HERO MEDIA */
     .hero-media {
       margin-top: 16px;
       width: 100%;
@@ -260,7 +169,6 @@
       overflow: hidden;
       display: grid;
       grid-template-columns: 1.7fr 1.3fr;
-      gap: 0;
     }
 
     .hero-img-main {
@@ -298,6 +206,12 @@
       position: relative;
       background-size: cover;
       background-position: center;
+      min-height: 105px;
+      background-image: url("https://images.pexels.com/photos/5355890/pexels-photo-5355890.jpeg?auto=compress&cs=tinysrgb&w=600");
+    }
+
+    .hero-img-small:nth-child(2) {
+      background-image: url("https://images.pexels.com/photos/3845653/pexels-photo-3845653.jpeg?auto=compress&cs=tinysrgb&w=600");
     }
 
     .hero-img-tag {
@@ -354,13 +268,13 @@
       text-align: center;
     }
 
-    /* BLOCCO STEP COME FUNZIONA */
+    /* STEP */
     .steps {
       border-radius: 24px;
       background: #ffffff;
       box-shadow: 0 14px 40px rgba(0,0,0,0.08);
       border: 1px solid #e3ede7;
-      padding: 18px 18px 20px;
+      padding: 22px 20px 22px;
     }
 
     .steps-title {
@@ -417,13 +331,13 @@
       color: #555555;
     }
 
-    /* TESTIMONIANZE VIDEO */
+    /* TESTIMONIANZE */
     .testimonials {
       border-radius: 24px;
       background: #ffffff;
       box-shadow: 0 14px 40px rgba(0,0,0,0.08);
       border: 1px solid #e3ede7;
-      padding: 18px 18px 20px;
+      padding: 22px 20px 22px;
     }
 
     .test-head {
@@ -531,10 +445,115 @@
       font-size: 12px;
     }
 
+    /* SEZIONE BEAUTY */
+    .beauty {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.14);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      min-height: 420px;
+      background: #ffffff;
+    }
+
+    .beauty-photo {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .beauty-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .beauty-content {
+      background: linear-gradient(135deg, #1a0533, #2d0a5e);
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+      color: #ffffff;
+    }
+
+    .beauty-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      width: fit-content;
+      color: #f0c6ff;
+    }
+
+    .beauty-title {
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .beauty-title span {
+      color: #e8a0ff;
+    }
+
+    .beauty-desc {
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .beauty-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .beauty-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 11px;
+      color: #ffffff;
+    }
+
     /* RESPONSIVE */
-    @media (max-width: 720px) }
+    @media (max-width: 900px) {
+      .hero {
+        padding: 22px 18px 20px;
+      }
+
       .hero-media {
+        grid-template-columns: 1fr;
+      }
+
+      .beauty {
+        grid-template-columns: 1fr;
+      }
+
+      .beauty-content {
+        padding: 28px 22px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .steps-grid {
         grid-template-columns: minmax(0, 1fr);
+      }
+
+      .test-head {
+        flex-direction: column;
       }
     }
 
@@ -543,9 +562,10 @@
         font-size: 26px;
       }
 
-      .steps-grid {
-        grid-template-columns: minmax(0, 1fr);
+      .page {
+        padding-inline: 12px;
       }
+    }
   </style>
 </head>
 <body>
@@ -597,8 +617,12 @@
         </div>
       </div>
       <div class="hero-img-side">
-        <div class="hero-img-small"></div>
-        <div class="hero-img-small"></div>
+        <div class="hero-img-small">
+          <div class="hero-img-tag">Cliniche selezionate</div>
+        </div>
+        <div class="hero-img-small">
+          <div class="hero-img-tag">Assistenza in italiano</div>
+        </div>
       </div>
     </div>
 
@@ -713,50 +737,49 @@
       </a>
     </div>
   </section>
-<!-- SEZIONE BEAUTY & LASER -->
-<section class="beauty">
 
-  <div class="beauty-photo">
-    <img
-      src="https://images.pexels.com/photos/6620946/pexels-photo-6620946.jpeg?auto=compress&cs=tinysrgb&w=800"
-      alt="Trattamento laser corpo"
-    />
-  </div>
+  <!-- SEZIONE BEAUTY & LASER -->
+  <section class="beauty">
+    <div class="beauty-photo">
+      <img
+        src="https://images.pexels.com/photos/6620946/pexels-photo-6620946.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Trattamento laser corpo"
+      />
+    </div>
 
-  <div class="beauty-content">
-    <div class="beauty-label">✦ Beauty & Laser</div>
+    <div class="beauty-content">
+      <div class="beauty-label">✦ Beauty &amp; Laser</div>
 
-    <h2 class="beauty-title">
-      Non solo denti.<br />
-      <span>Prenditi cura</span><br />
-      di tutto il tuo corpo.
-    </h2>
+      <h2 class="beauty-title">
+        Non solo denti.<br />
+        <span>Prenditi cura</span><br />
+        di tutto il tuo corpo.
+      </h2>
 
-    <p class="beauty-desc">
-      Insieme ai trattamenti dentali, offriamo anche
-      <strong>laser corpo e viso</strong>, epilazione definitiva,
-      trattamenti estetici avanzati e molto altro —
-      tutto nello stesso viaggio, a prezzi che in Italia
-      non troveresti mai.
-    </p>
+      <p class="beauty-desc">
+        Insieme ai trattamenti dentali, offriamo anche
+        <strong>laser corpo e viso</strong>, epilazione definitiva,
+        trattamenti estetici avanzati e molto altro —
+        tutto nello stesso viaggio, a prezzi che in Italia
+        non troveresti mai.
+      </p>
 
-    <ul class="beauty-pills">
-      > Laser corpo e viso</li>
-      > Epilazione definitiva</li>
-      > Filler e botox</li>
-      > Trattamenti viso</li>
-    </ul>
+      <ul class="beauty-pills">
+        <li class="beauty-pill">Laser corpo e viso</li>
+        <li class="beauty-pill">Epilazione definitiva</li>
+        <li class="beauty-pill">Filler e botox</li>
+        <li class="beauty-pill">Trattamenti viso</li>
+      </ul>
 
-    <a href="https://wa.me/393489291264"
-       target="_blank" rel="noopener"
-       class="wa-btn-main"
-       style="margin-top: 6px;">
-      <span class="wa-main-icon">✆</span>
-      <span>Chiedi info su Beauty</span>
-    </a>
-  </div>
-
-</section>
+      <a href="https://wa.me/393489291264"
+         target="_blank" rel="noopener"
+         class="wa-btn-main"
+         style="margin-top: 6px;">
+        <span class="wa-main-icon">✆</span>
+        <span>Chiedi info su Beauty</span>
+      </a>
+    </div>
+  </section>
 </div>
 
 </body>
