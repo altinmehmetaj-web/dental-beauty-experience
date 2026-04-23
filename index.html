@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Risparmia il 70% sui denti rispetto ai dentisti in Italia</title>
 
   <link rel="icon" type="image/png" href="logodental.jpeg">
   <link rel="apple-touch-icon" href="logodental.jpeg">
+
   <style>
     :root {
       --green-main: #118c4f;
@@ -36,44 +37,47 @@
 
     .page {
       min-height: 100vh;
-      padding: 18px 14px 40px 14px;
+      padding: 24px 18px 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 26px;
+      gap: 28px;
     }
 
-    /* HERO A TUTTA LARGHEZZA (UNA COLONNA) */
-    .hero {
+    /* contenitore centrale per desktop */
+    .page > section {
       width: 100%;
-      max-width: 900px;
+      max-width: 1100px; /* più largo su desktop */
+    }
+
+    /* HERO */
+    .hero {
       border-radius: 28px;
       background: radial-gradient(circle at top left, #f0fff6, #ffffff);
       box-shadow: 0 18px 60px rgba(0,0,0,0.12);
       border: 1px solid #e6efe9;
-      padding: 20px 18px 22px 18px;
+      padding: 24px 22px 24px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       gap: 16px;
-      
     }
-.hero-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
-  }
 
-.hero-logo img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-   
-  }
+    .hero-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .hero-logo img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
 
     .hero-logo-text {
       font-size: 15px;
@@ -99,11 +103,12 @@
     }
 
     .hero-title {
-      font-size: 32px;
-      line-height: 1.1;
+      font-size: clamp(28px, 3vw, 36px);
+      line-height: 1.15;
       font-weight: 800;
       color: var(--green-dark);
       margin-top: 6px;
+      max-width: 720px;
     }
 
     .hero-title span {
@@ -113,7 +118,7 @@
     .hero-sub {
       font-size: 15px;
       margin-top: 6px;
-      max-width: 580px;
+      max-width: 620px;
     }
 
     .hero-sub strong {
@@ -127,6 +132,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
+      max-width: 720px;
     }
 
     .hero-pill {
@@ -169,10 +175,8 @@
       background-size: cover;
       background-position: center;
       min-height: 210px;
-      
     }
 
-    
     .hero-img-main::before {
       content: "";
       position: absolute;
@@ -188,6 +192,7 @@
       font-weight: 600;
       color: #ffffff;
       text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      max-width: 85%;
     }
 
     .hero-img-side {
@@ -251,17 +256,17 @@
     .hero-cta-note {
       font-size: 11px;
       color: #666666;
+      max-width: 540px;
+      text-align: center;
     }
 
     /* BLOCCO STEP COME FUNZIONA */
     .steps {
-      width: 100%;
-      max-width: 900px;
       border-radius: 24px;
       background: #ffffff;
       box-shadow: 0 14px 40px rgba(0,0,0,0.08);
       border: 1px solid #e3ede7;
-      padding: 16px 16px 18px 16px;
+      padding: 18px 18px 20px;
     }
 
     .steps-title {
@@ -269,13 +274,13 @@
       font-size: 18px;
       font-weight: 600;
       color: var(--green-dark);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
+      gap: 12px;
       font-size: 12px;
     }
 
@@ -312,7 +317,7 @@
     }
 
     .steps-cta {
-      margin-top: 10px;
+      margin-top: 12px;
       text-align: center;
       font-size: 12px;
       color: #555555;
@@ -320,19 +325,17 @@
 
     /* TESTIMONIANZE VIDEO */
     .testimonials {
-      width: 100%;
-      max-width: 900px;
       border-radius: 24px;
       background: #ffffff;
       box-shadow: 0 14px 40px rgba(0,0,0,0.08);
       border: 1px solid #e3ede7;
-      padding: 16px 16px 18px 16px;
+      padding: 18px 18px 20px;
     }
 
     .test-head {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
       margin-bottom: 12px;
     }
@@ -357,7 +360,7 @@
 
     .test-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 12px;
     }
 
@@ -376,33 +379,18 @@
       position: relative;
       border-radius: 12px;
       overflow: hidden;
-      height: 160px;
+      height: 0;
+      padding-bottom: 56.25%;
       background-size: cover;
       background-position: center;
-  
     }
 
-    .video-overlay {
+    .video-wrap iframe {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
-    }
-
-    .play-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      color: var(--green-dark);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     .test-name {
@@ -449,9 +437,10 @@
       font-size: 12px;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 720px) {
       .hero-media {
-        grid-template-columns: minmax(0,1fr);
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
@@ -461,7 +450,7 @@
       }
 
       .steps-grid {
-        grid-template-columns: minmax(0,1fr);
+        grid-template-columns: minmax(0, 1fr);
       }
     }
   </style>
@@ -470,10 +459,10 @@
 
 <div class="page">
 
-  <!-- HERO UNA COLONNA -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-logo">
-      <img src="logodental.jpeg" alt="Dental & Beauty Experience" />
+      <img src="logodental.jpeg" alt="Dental &amp; Beauty Experience" />
       <div class="hero-logo-text">Dental &amp; Beauty Experience</div>
     </div>
 
@@ -482,12 +471,13 @@
     </div>
 
     <h1 class="hero-title">
-      Con Noi,la scelta migliore per il tuo sorriso.<br />
-      Risparmia <span>fino al 70%</span> Perchè pagare di più in Italia?
+      Con noi, la scelta migliore per il tuo sorriso.<br />
+      Risparmia <span>fino al 70%</span>. Perché pagare di più in Italia?
     </h1>
 
     <p class="hero-sub">
-     Ottieni lo stesso standard qualitativo <strong>Cliniche selezionate, assistenza completa, <strong>    Zero stress</strong>.<br />
+      Ottieni lo stesso standard qualitativo: <strong>cliniche selezionate, assistenza completa,
+      zero stress</strong>.<br />
       Tu devi solo scriverci su WhatsApp e richiedere il tuo preventivo gratuito.
     </p>
 
@@ -506,20 +496,16 @@
       </li>
     </ul>
 
-        <div class="hero-media">
+    <div class="hero-media">
       <div class="hero-img-main">
         <div class="hero-img-main-text">
           Sorriso nuovo + viaggio organizzato,<br />
           a un prezzo che in Italia pagheresti molto di più.
-  
+        </div>
       </div>
       <div class="hero-img-side">
-        <div class="hero-img-small">
-         
-        </div>
-        <div class="hero-img-small">
-          
-        </div>
+        <div class="hero-img-small"></div>
+        <div class="hero-img-small"></div>
       </div>
     </div>
 
@@ -534,24 +520,30 @@
     </div>
   </section>
 
-  <!-- STEP COME FUNZIONA -->
+  <!-- STEP -->
   <section class="steps">
     <div class="steps-title">Come funziona in pratica</div>
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-num">1</div>
         <div class="step-title">Scrivi su WhatsApp</div>
-        <div class="step-text">Ci mandi foto e ci racconti che tipo di lavoro dentale/estetico ti serve.</div>
+        <div class="step-text">
+          Ci mandi foto e ci racconti che tipo di lavoro dentale/estetico ti serve.
+        </div>
       </div>
       <div class="step-card">
         <div class="step-num">2</div>
         <div class="step-title">Ricevi il preventivo</div>
-        <div class="step-text">La clinica in Albania prepara un preventivo dettagliato: tu decidi se accettare.</div>
+        <div class="step-text">
+          La clinica in Albania prepara un preventivo dettagliato: tu decidi se accettare.
+        </div>
       </div>
       <div class="step-card">
         <div class="step-num">3</div>
         <div class="step-title">Pensiamo a tutto noi</div>
-        <div class="step-text">Organizziamo volo, hotel con colazione, transfer e appuntamenti in clinica.</div>
+        <div class="step-text">
+          Organizziamo volo, hotel con colazione, transfer e appuntamenti in clinica.
+        </div>
       </div>
     </div>
     <div class="steps-cta">
@@ -559,66 +551,68 @@
     </div>
   </section>
 
-  <!-- TESTIMONIANZE VIDEO -->
+  <!-- TESTIMONIANZE -->
   <section class="testimonials">
     <div class="test-head">
       <div>
         <div class="test-title">Guarda il feedback dei nostri clienti</div>
-        <div class="test-sub">Video brevi di pazienti italiani che hanno scelto Albania per denti ed estetica.</div>
-      </div>
-      <div class="test-note">
-      </div>
-  </div>
-      <div class="test-grid">
-      <div class="test-card">
-  <div style="position:relative; width:100%; padding-bottom:56.25%; height:0; border-radius:12px; overflow:hidden;">
-    <iframe
-      src="https://www.youtube.com/embed/18aLfHgMzts"
-      title="Erika"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-      style="position:absolute; top:0; left:0; width:100%; height:100%;">
-    </iframe>
-  </div>
-  <div class="test-name">Erika – Impianti completi</div>
-  <div class="test-tag">Circa 70% in meno rispetto al preventivo italiano</div>
-  <div class="test-text">“In Italia non avrei potuto permettermelo. In Albania ho fatto tutto in pochi giorni.”
+        <div class="test-sub">
+          Video brevi di pazienti italiani che hanno scelto Albania per denti ed estetica.
         </div>
       </div>
-  <div class="test-card">
-    <div style="position:relative; width:100%; padding-bottom:56.25%; height:0; border-radius:12px; overflow:hidden;">
-      <iframe
-        src="https://www.youtube.com/embed/V8kZ5sA5IV4"
-        title="Dott. Andrea Quagliero"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        style="position:absolute; top:0; left:0; width:100%; height:100%;">
-      </iframe>
+      <div class="test-note"></div>
     </div>
-    <div class="test-name">Dott. Andrea Quagliero – Professore all'Università di Roma</div>
-    <div class="test-tag">Denti fissi + viaggio e alloggio gestiti dal team</div>
-    <div class="test-text">
-      "Con oltre 35 anni di esperienza nel settore dentale, offriamo tecnologia avanzata e un lavoro di alta qualità."
+
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/18aLfHgMzts"
+            title="Erika – Impianti completi"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="test-name">Erika – Impianti completi</div>
+        <div class="test-tag">Circa 70% in meno rispetto al preventivo italiano</div>
+        <div class="test-text">
+          “In Italia non avrei potuto permettermelo. In Albania ho fatto tutto in pochi giorni.”
+        </div>
+      </div>
+
+      <div class="test-card">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/V8kZ5sA5IV4"
+            title="Dott. Andrea Quagliero"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="test-name">Dott. Andrea Quagliero – Professore all'Università di Roma</div>
+        <div class="test-tag">Denti fissi + viaggio e alloggio gestiti dal team</div>
+        <div class="test-text">
+          "Con oltre 35 anni di esperienza nel settore dentale, offriamo tecnologia avanzata e un lavoro di alta qualità."
+        </div>
+      </div>
+
+      <div class="test-card">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/1jL91H0xp6c"
+            title="Giuseppe.P"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="test-name">Giuseppe P. – Pensionato</div>
+        <div class="test-tag">Professionalità, velocità, avanguardia</div>
+        <div class="test-text">
+          “Supporto sempre in italiano, dall’aeroporto al rientro a casa.”
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="test-card">
-    <div style="position:relative; width:100%; padding-bottom:56.25%; height:0; border-radius:12px; overflow:hidden;">
-      <iframe  
-        src="https://www.youtube.com/embed/1jL91H0xp6c"
-        title="Giuseppe.P"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        style="position:absolute; top:0; left:0; width:100%; height:100%;">
-      </iframe>
-    </div>
-    <div class="test-name">Giuseppe .P – Pensionato</div>
-    <div class="test-tag">Professionalità,velocità,avanguardia</div>
-    <div class="test-text"> “Supporto sempre in italiano, dall’aeroporto al rientro a casa.
-    </div>
-  </div>
+
     <div class="test-cta">
       <a href="https://wa.me/393489291264" target="_blank" rel="noopener" class="wa-btn-small">
         <span class="wa-small-icon">✆</span>
