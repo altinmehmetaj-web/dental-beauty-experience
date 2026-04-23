@@ -16,7 +16,101 @@
       --bg: #fcfdfb;
       --text-dark: #111111;
     }
+/* SEZIONE BEAUTY */
+.beauty {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.14);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+}
 
+.beauty-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.beauty-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.beauty-content {
+  background: linear-gradient(135deg, #1a0533, #2d0a5e);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  color: #ffffff;
+}
+
+.beauty-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  width: fit-content;
+  color: #f0c6ff;
+}
+
+.beauty-title {
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.beauty-title span {
+  color: #e8a0ff;
+}
+
+.beauty-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.85);
+}
+
+.beauty-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.beauty-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 11px;
+  color: #ffffff;
+}
+
+/* mobile */
+@media (max-width: 720px) {
+  .beauty {
+    grid-template-columns: 1fr;
+  }
+
+  .beauty-photo {
+    height: 260px;
+  }
+
+  .beauty-content {
+    padding: 28px 22px;
+  }
     * {
       box-sizing: border-box;
       margin: 0;
@@ -620,7 +714,50 @@
       </a>
     </div>
   </section>
+<!-- SEZIONE BEAUTY & LASER -->
+<section class="beauty">
 
+  <div class="beauty-photo">
+    <img
+      src="https://images.pexels.com/photos/7446990/pexels-photo-7446990.jpeg?auto=compress&cs=tinysrgb&w=800"
+      alt="Trattamento laser corpo"
+    />
+  </div>
+
+  <div class="beauty-content">
+    <div class="beauty-label">✦ Beauty & Laser</div>
+
+    <h2 class="beauty-title">
+      Non solo denti.<br />
+      <span>Prenditi cura</span><br />
+      di tutto il tuo corpo.
+    </h2>
+
+    <p class="beauty-desc">
+      Insieme ai trattamenti dentali, offriamo anche
+      <strong>laser corpo e viso</strong>, epilazione definitiva,
+      trattamenti estetici avanzati e molto altro —
+      tutto nello stesso viaggio, a prezzi che in Italia
+      non troveresti mai.
+    </p>
+
+    <ul class="beauty-pills">
+      >✦ Laser corpo e viso</li>
+      >✦ Epilazione definitiva</li>
+      >✦ Filler e botox</li>
+      >✦ Trattamenti viso</li>
+    </ul>
+
+    <a href="https://wa.me/393489291264"
+       target="_blank" rel="noopener"
+       class="wa-btn-main"
+       style="margin-top: 6px;">
+      <span class="wa-main-icon">✆</span>
+      <span>Chiedi info su Beauty & Laser</span>
+    </a>
+  </div>
+
+</section>
 </div>
 
 </body>
